@@ -50,3 +50,64 @@ git log --oneline             # Histórico resumido
 n Observação Final
 Sempre usar mensagens de commit claras e descritivas. 
 Exemplo: git commit -m "Adicionei rota /curso no Flask".
+
+
+
+
+
+
+---
+
+## 🌤️ Script: API de Clima
+
+O arquivo `02_api_clima.py` realiza uma consulta à API gratuita [Open-Meteo](https://open-meteo.com/) e exibe:
+
+- ✅ Temperatura atual (°C)
+- ✅ Velocidade do vento (km/h)
+- 🌍 Cidades consultadas: Curitiba e São Paulo
+
+### 🧪 Como executar
+
+1. Instale o pacote necessário:
+
+```bash
+pip install requests
+Execute o script:
+
+bash
+Copiar código
+python 02_api_clima.py
+💻 Exemplo de saída
+text
+Copiar código
+Temperatura atual: 18.8 °C
+Velocidade do vento: 18.6 km/h
+📸 Print da execução (PyCharm)
+
+yaml
+Copiar código
+
+---
+
+## ✅ Depois de colar o trecho:
+
+1. Clique no botão verde **"Commit changes"** no canto superior direito.
+2. Deixe a descrição como `docs: adiciona instruções do script de clima` (ou algo similar).
+3. Clique em **Commit directly to the `main` branch**.
+
+---
+
+## 📎 Observações
+
+- Se ainda **não criou a pasta `/prints` com a imagem**, recomendo fazer isso localmente no PyCharm:
+  ```bash
+  mkdir prints
+  # coloque a imagem do print lá dentro
+Depois:
+
+bash
+Copiar código
+git add prints/saida-execucao.png
+git commit -m "docs: adiciona print de execução ao README"
+git push
+
