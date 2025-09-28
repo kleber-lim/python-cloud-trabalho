@@ -106,6 +106,106 @@ Copiar código
 Depois:
 
 bash
+
+
+
+
+ Consulta de Repositório via API do GitHub
+
+Este script em Python utiliza a API pública do GitHub para obter informações de um repositório específico.
+
+---
+
+## 📌 Objetivo
+
+Obter e exibir os seguintes dados do repositório:
+
+- ✅ Nome do repositório
+- ✅ Descrição
+- ✅ Quantidade de estrelas ⭐
+
+---
+
+## 🧪 Como Funciona
+
+O script faz uma requisição `GET` para o endpoint da API do GitHub:
+
+https://api.github.com/repos/kleber-lim/python-cloud-trabalho
+
+yaml
+Copiar código
+
+Se a resposta for bem-sucedida (`status_code == 200`), ele imprime os dados desejados.
+
+---
+
+## 🧠 Tecnologias Usadas
+
+- Python 3.x
+- Biblioteca `requests`
+- API pública REST do GitHub
+
+---
+
+## 📁 Código-fonte (`github_api.py`)
+
+```python
+import requests
+
+# URL da API do GitHub para o repositório
+url = "https://api.github.com/repos/kleber-lim/python-cloud-trabalho"
+
+# Faz a requisição GET
+response = requests.get(url)
+
+# Verifica se a requisição foi bem-sucedida
+if response.status_code == 200:
+    data = response.json()
+    print(f"Nome do repositório: {data['name']}")
+    print(f"Descrição: {data['description']}")
+    print(f"Estrelas: {data['stargazers_count']}")
+else:
+    print(f"Erro ao acessar a API: {response.status_code}")
+🚀 Como Executar
+Instale a biblioteca requests se ainda não tiver:
+
+bash
+Copiar código
+pip install requests
+Execute o script:
+
+bash
+Copiar código
+python github_api.py
+💻 Exemplo de saída
+text
+Copiar código
+Nome do repositório: python-cloud-trabalho
+Descrição: Repositório para trabalho de Python na nuvem
+Estrelas: 0
+📝 Licença
+Distribuído sob a licença MIT.
+
+🙋‍♂️ Autor
+Kleber Lima
+
+yaml
+Copiar código
+
+---
+
+## ✅ O que fazer agora:
+
+1. Crie o arquivo no PyCharm ou direto no GitHub com o nome:  
+   `README.md` (ou edite o existente, se for separado por scripts).
+2. Cole esse conteúdo.
+3. Faça o commit com a mensagem:
+
+```bash
+git add README.md
+git commit -m "docs: adiciona documentação da API GitHub (github_api.py)"
+git push
+
 Copiar código
 git add prints/saida-execucao.png
 git commit -m "docs: adiciona print de execução ao README"
